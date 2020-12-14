@@ -1,5 +1,5 @@
 function findBusyTimes(intervals) {
-  const sortedIntervals = intervals.sort(({ begin: a }, { begin: b }) => a - b);
+  const sortedIntervals = [...intervals].sort(({ begin: a }, { begin: b }) => a - b);
   const firstInterval = sortedIntervals[0];
   const subsequentIntervals = sortedIntervals.slice(1);
 
